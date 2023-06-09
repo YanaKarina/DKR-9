@@ -1,0 +1,97 @@
+object fMain: TfMain
+  Left = 407
+  Height = 559
+  Top = 218
+  Width = 1082
+  BorderStyle = bsDialog
+  Caption = 'Сотрудники банка'
+  ClientHeight = 559
+  ClientWidth = 1082
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.2.4.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 32
+    Top = 0
+    Width = 1082
+    Align = alTop
+    ClientHeight = 32
+    ClientWidth = 1082
+    TabOrder = 0
+    object bAdd: TSpeedButton
+      Left = 128
+      Height = 30
+      Top = 0
+      Width = 150
+      Caption = 'Добавить '
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -17
+      Font.Name = 'Times New Roman'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnClick = bAddClick
+      ParentFont = False
+    end
+    object bEdit: TSpeedButton
+      Left = 328
+      Height = 30
+      Top = 0
+      Width = 173
+      Caption = 'Редактировать '
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -17
+      Font.Name = 'Times New Roman'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnClick = bEditClick
+      ParentFont = False
+    end
+    object bDel: TSpeedButton
+      Left = 544
+      Height = 30
+      Top = 0
+      Width = 150
+      Caption = 'Удалить '
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -17
+      Font.Name = 'Times New Roman'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnClick = bDelClick
+      ParentFont = False
+    end
+    object bSort: TSpeedButton
+      Left = 744
+      Height = 30
+      Top = 0
+      Width = 150
+      Caption = 'Сортировать '
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -17
+      Font.Name = 'Times New Roman'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnClick = bSortClick
+      ParentFont = False
+    end
+  end
+  object SG: TStringGrid
+    Left = 0
+    Height = 527
+    Top = 32
+    Width = 1082
+    Align = alClient
+    ColCount = 7
+    FixedCols = 0
+    RowCount = 1
+    TabOrder = 1
+    OnDblClick = bEditClick
+  end
+end
